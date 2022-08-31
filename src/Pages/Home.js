@@ -1,5 +1,4 @@
 import React from 'react'
-import { assets, COLORS, SHADOWS, SIZES} from "../constants"
 import NavBar from '../components/NavBar'
 import { NavLink } from "react-router-dom";
 

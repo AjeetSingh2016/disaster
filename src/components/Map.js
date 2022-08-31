@@ -9,7 +9,8 @@ const Map = ({ eventData }) => {
     const hanldeClick = () => {
         setLocationInfo(null)
     }
-   {document.body.addEventListener('click', hanldeClick, true); }
+    
+   document.body.addEventListener('click', hanldeClick, true);
 
     const [locationInfo, setLocationInfo] = useState(null)
 

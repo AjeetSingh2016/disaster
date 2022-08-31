@@ -22,7 +22,7 @@ const Data = () => {
         fetchData()
 
         console.log(eventData);
-    }, [])
+    })
     
   return (
      <div>
