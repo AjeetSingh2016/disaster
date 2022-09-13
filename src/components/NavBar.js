@@ -11,7 +11,10 @@ const NavBar = () => {
       flex
       items-center
       justify-between
-      border-sky-900"
+      border-sky-900
+      z-10
+      sticky top-0"
+  
       style={{ width: "100%", height: "10vh" }}
     >
       <img alt="img"  className="cursor-pointer" src="https://img.icons8.com/arcade/64/000000/experimental-tsunami-arcade.png"/>

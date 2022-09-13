@@ -5,7 +5,6 @@ const LocationMarker = ({ lat, long, onClick }) => {
   return (
     <div onClick={onClick} style={{fontSize:"2rem",color:"red" }}>
         <Icon icon={locationMarker} />
-        
     </div>
   )
 }

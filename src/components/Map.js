@@ -18,6 +18,7 @@ const Map = ({ eventData }) => {
 
     if (ev.categories[0].id === 8) {
       return <LocationMarker
+      key={ev.id}
       lat={ev.geometries[0].coordinates[1]}
       lng={ev.geometries[0].coordinates[0]}
       onClick={()=> setLocationInfo({id: ev.id, title: ev.title })}
@@ -36,11 +37,13 @@ const Map = ({ eventData }) => {
 
   return (
     <div
+    className="z-0"
       style={{
         width: "100%",
         height: "100vh",
         backgroundColor: "purple",
         position: "relative",
+        
       }}
     >
       <NavBar />

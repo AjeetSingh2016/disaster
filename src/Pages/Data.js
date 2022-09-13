@@ -1,13 +1,17 @@
+import { info } from 'autoprefixer'
 import React, {useState, useEffect} from 'react'
 import Loader from '../components/Loader'
 import Map from '../components/Map'
+import { useDataContext } from '../Context/ContextProvider'
+
 const Data = () => {
-    const [eventData, setEventData] = useState([])
-    const [loading, setLoading] = useState(false)
 
+    const {eventData, setEventData,loading, setLoading} = useDataContext();
+
+    
     useEffect(() => {
-
         const fetchData = async () =>{
+            console.log("fetching is running");
             setLoading(true)
             const res = await fetch("https://eonet.gsfc.nasa.gov/api/v2.1/events")
             
@@ -16,14 +20,13 @@ const Data = () => {
             setEventData(events)
             setLoading(false)
 
-
         }
-
-        fetchData()
-
+        if(eventData.length===0){
+            fetchData()
+        }
         console.log(eventData);
-    })
-    
+    },[eventData])
+
   return (
      <div>
           {!loading ? <Map eventData={eventData} /> :
