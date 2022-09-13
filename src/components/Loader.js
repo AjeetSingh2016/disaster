@@ -10,10 +10,12 @@ const Loader = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        flexDirection: "column",
         backgroundColor: "white",
       }}
     >
       <TailSpin color="blue" height="80" width="80" />
+      <h3>Fetching data...</h3>
     </div>
   );
 };
